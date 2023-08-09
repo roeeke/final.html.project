@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+
 }
 
 .hero {
@@ -161,237 +161,330 @@ hr {
     opacity: 100%;
 }
 
+.copyrights{
+    text-align: center;
+    font-size: 7px;
+    color: #fff;
+}
 
-.card {
-    position: relative;
-    width: 600px;
+.item1 {
+    grid-area: a;
+}
+
+.item2 {
+    grid-area: b;
+    font-style: initial;
+    font-size: 20px;
+    background-color: rgb(181, 181, 181);
+    margin: 2px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.item3 {
+    grid-area: c;
+}
+
+.item4 {
+    grid-area: d;
+}
+
+.item5 {
+    grid-area: e;
+    font-style: initial;
+    font-size: 20px;
+    background-color: rgb(199, 197, 197);
+    margin: 2px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.gridcontainer {
+    display: grid;
+    margin: 10vw;
+    margin-bottom: 25vh;
+    width: 80vw;
     height: 400px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    grid-template-areas:
+        "a b c c"
+        "d d c c"
+        "d d e e";
+}
+
+.card2 {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    perspective: 1000px;
-    box-shadow: 0 0 0 5px #ffffff80;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .containerus{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+ @media (max-width:460px){
+    .hero {
+        width: 100%;
+        height: 40vh;
+        background-image: linear-gradient(rgba(20, 11, 57, 0.3)rgba(16, 6, 56, 0.3));
+        position: relative;
+        padding: 0 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .herovideo {
+        transition: all 0.5 ease ease-in-out;
+    }
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    nav .logo {
+        width:12%;
+        height: 12%;
+        margin:  0px;
+    }
+    
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 0px;
+        padding: 7px 4px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: rgb(250, 251, 251);
+        font-size: 15px;
+    }
+    #homelist {
+        text-decoration: none;
+        color: rgb(250, 251, 251);
+        font-size: 10px;
+        padding: 2px 10px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+    }
+    .explor {
+        text-align: center;
+    }
+    
+    .explor h1 {
+        color: white;
+        font-style: inherit;
+        font-size: 30px;
+    }
+    
+    .explor h2 {
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 12px;
+        margin-top: 3px;
+        padding: 8px;
+        display: inline-block;
+        border: 2px solid;
+        border-radius: 50px;
+        justify-content: center;
+        text-align: center;
+        transition: 0.5s;
+    }
+    .content {
+        background-image: url(https://wallpaperaccess.com/full/2859281.jpg);
+        position: absolute;
+        width: 100%;
+    }
+    .about {
+        color: #ffffff8a;
+        margin: 7%;
+        font-size: 20px;
+        font-family: cursive;
+    }
+    
+    #historyhead {
+        margin: 0% 5%;
+        color: #fff;
+        font-size: 19px;
+        font-style: oblique;
+        transition: 0.5s;
+    }
+    
+    .historyp {
+        color: #fff;
+        margin: 0% 5%;
+        margin-bottom: 4%;
+        font-size: 17px;
+        font-style: inherit;
+    }
+    
+    #history {
+       display: flex;
+        justify-content: space-around;
+        margin: 0% 3%;
+        margin-bottom: 3%;
+        align-items: center;
+
+    }
+    
+    .historyimg p {
+        color: #fff;
+        font-size: 15px;
+        font-family: cursive;
+        text-align: center;
+        margin: 3% 0%;
+        width: 130px;
+    }
+    
+    .historyimg img {
+        display: flex;
+        width: 130px;
+        height: 100px;
+        border: 2px solid color(white);
+        border-radius: 50px;
+        opacity: 60%;
+        transition: 0.2s;
+    }
+    
+    
+    .historyimg img:hover {
+        width: 150px;
+        height: 120px;
+        opacity: 100%;
+    }
+    
+    .copyrights{
+        text-align: center;
+        font-size: 7px;
+        color: #fff;
+    }
+
+
+.item1 {
+    grid-area: a;
 }
 
-.card svg {
-    width: 48px;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
-
-.card__content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: #050404;
-    transform: rotateX(-90deg);
-    transform-origin: bottom;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.card:hover .card__content {
-    transform: rotateX(0deg);
-}
-
-.card__title {
-    margin: 5%;
-    font-size: 50px;
-    font-family: cursive;
-    color: #9d9d9d;
-    font-weight: 700;
-    text-align: center;
-}
-
-.card:hover svg {
-    scale: 0;
-}
-
-.card__description {
-    margin: 30px 0 0;
+.item2 {
+    grid-area: b;
+    font-style: initial;
     font-size: 20px;
-    font-style: oblique;
-    color: #f9f9f9;
-    line-height: 1.4;
+    background-color: rgb(181, 181, 181);
+    margin: 2px;
     text-align: center;
+    border-radius: 20px;
 }
 
-.card img {
-    width: 600px;
+.item3 {
+    grid-area: c;
+}
+
+.item4 {
+    grid-area: d;
+    display: none;
+}
+
+.item5 {
+    grid-area: e;
+    font-style: initial;
+    font-size: 20px;
+    background-color: rgb(199, 197, 197);
+    margin: 2px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.gridcontainer {
+    display: flex ;
+    flex-direction: column;
+    margin-top: 70vh;
+    margin-bottom: 35vh;
+    width: 70vw;
     height: 400px;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: auto;
+    gap: 15px;
+    grid-template-areas:
+        "a b c c"
+        "d d c c"
+        "d d e e";
 }
 
-button {
-    position: relative;
-    width: 11em;
-    height: 4em;
-    outline: none;
-    transition: 0.1s;
-    background-color: transparent;
-    border: none;
-    font-size: 13px;
-    font-weight: bold;
-    color: #ddebf0;
-}
-
-#clip {
-    --color: #2761c3;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    border: 5px double var(--color);
-    box-shadow: inset 0px 0px 15px #195480;
-    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}
-
-.arrow {
-    position: absolute;
-    transition: 0.2s;
-    background-color: #2761c3;
-    top: 35%;
-    width: 11%;
-    height: 30%;
-}
-
-#leftArrow {
-    left: -13.5%;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
-}
-
-#rightArrow {
-    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
-    left: 102%;
-}
-
-button:hover #rightArrow {
-    background-color: #27c39f;
-    left: -15%;
-    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
-}
-
-button:hover #leftArrow {
-    background-color: #27c39f;
-    left: 103%;
-    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
-}
-
-.corner {
-    position: absolute;
-    width: 4em;
-    height: 4em;
-    background-color: #2761c3;
-    box-shadow: inset 1px 1px 8px #2781c3;
-    transform: scale(1) rotate(45deg);
-    transition: 0.2s;
-}
-
-#rightTop {
-    top: -1.98em;
-    left: 91%;
-}
-
-#leftTop {
-    top: -1.96em;
-    left: -3.0em;
-}
-
-#leftBottom {
-    top: 2.10em;
-    left: -2.15em;
-}
-
-#rightBottom {
-    top: 45%;
-    left: 88%;
-}
-
-button:hover #leftTop {
-    animation: 0.1s ease-in-out 0.05s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover #rightTop {
-    animation: 0.1s ease-in-out 0.15s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover #rightBottom {
-    animation: 0.1s ease-in-out 0.25s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover #leftBottom {
-    animation: 0.1s ease-in-out 0.35s both changeColor8,
-        0.2s linear 0.4s both lightEffect8;
-}
-
-button:hover .corner {
-    transform: scale(1.25) rotate(45deg);
-}
-
-button:hover #clip {
-    animation: 0.2s ease-in-out 0.55s both greenLight8;
-    --color: #27c39f;
-}
-
-@keyframes changeColor8 {
-    from {
-        background-color: #2781c3;
-    }
-
-    to {
-        background-color: #27c39f;
-    }
-}
-
-@keyframes lightEffect8 {
-    from {
-        box-shadow: 1px 1px 5px #27c39f;
-    }
-
-    to {
-        box-shadow: 0 0 2px #27c39f;
-    }
-}
-
-@keyframes greenLight8 {
-    from {}
-
-    to {
-        box-shadow: inset 0px 0px 32px #27c39f;
-    }
-}
-
-@keyframes leftArrow8 {
-    from {
-        transform: translate(0px);
-    }
-
-    to {
-        transform: translateX(10px);
-    }
-}
-
-@keyframes rightArrow8 {
-    from {
-        transform: translate(0px);
-    }
-
-    to {
-        transform: translateX(-10px);
-    }
-}
+ }
+  
