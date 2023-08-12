@@ -174,12 +174,14 @@ hr {
 .item2 {
     grid-area: b;
     font-style: initial;
-    font-size: 20px;
+    font-size: 30px;
     background-color: rgb(181, 181, 181);
     margin: 2px;
     text-align: center;
     border-radius: 20px;
 }
+.item2 p{
+   margin-top: 40px;}
 
 .item3 {
     grid-area: c;
