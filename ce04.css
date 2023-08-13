@@ -318,6 +318,7 @@ button:hover #clip {
     opacity: 70%;
     transition: 0.5s;
 }
+
 .item1:hover {
     border: 4px solid #3f1111;
     border-radius: 20px;
@@ -333,12 +334,14 @@ button:hover #clip {
     opacity: 70%;
     transition: 0.5s;
 }
+
 .item2:hover {
     border: 4px solid #3f1111;
     border-radius: 20px;
     background-color: #655e5e;
     opacity: 100%;
 }
+
 .item3 {
     grid-area: c;
     width: 60%;
@@ -349,7 +352,7 @@ button:hover #clip {
     transition: 0.5s;
 }
 
-.item3 img{
+.item3 img {
     border-radius: 100px;
     border: 6px double #000000;
     opacity: 70%;
@@ -380,6 +383,7 @@ button:hover #clip {
     opacity: 70%;
     transition: 0.5s;
 }
+
 .item5:hover {
     border: 4px solid #3f1111;
     border-radius: 20px;
@@ -387,12 +391,12 @@ button:hover #clip {
     opacity: 100%;
 }
 
-.gridcontainer h1{
- font-size: 50px;
- color: #010000;
+.gridcontainer h1 {
+    font-size: 50px;
+    color: #010000;
 }
 
-.gridcontainer p{
+.gridcontainer p {
     font-size: 20px;
     color: #000000;
 }
@@ -400,7 +404,7 @@ button:hover #clip {
 .gridcontainer {
     display: grid;
     margin-top: 0vh;
-margin-left: 18vh;
+    margin-left: 18vh;
     width: 80%;
     height: 100px;
     grid-template-columns: repeat(3 1fr);
@@ -554,10 +558,11 @@ margin-left: 18vh;
     .br {
         display: none;
     }
+
     .gridcontainer {
         display: grid;
-display: flex;
-flex-direction: column;
+        display: flex;
+        flex-direction: column;
         margin-top: 20%;
         margin-left: 10%;
         width: 80%;
@@ -568,8 +573,9 @@ flex-direction: column;
         grid-template-areas:
             "a c d"
             "b c e";
-}
-.item3{
-    display: none;
-}
+    }
+
+    .item3 {
+        display: none;
+    }
 }
